@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100vh;
+}
+
+.button-text {
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+    margin-top: 1px;
+    /* fügt einen Abstand oberhalb des Textes hinzu */
+}
+
+.pokeball-button {
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.pokeball-button:active {
+    transform: scale(0.9);
+    /* verkleinert den Button beim Klicken */
+    box-shadow: 0 0 10px #000;
+    /* fügt einen Schatten hinzu */
+}
+
+.pokeball-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 50%;
+    background-color: red;
+    border-bottom: 2px solid black;
+}
+
+.pokeball-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* allows items to wrap to a new line if necessary */
+}
+
+.item {
+    flex: 1;
+    /* sets flex-grow, flex-shrink, and flex-basis to 1 */
+    margin: 10px;
+    /* adds margin between items */
+    background-color: #eee;
+    /* adds a background color */
+    text-align: center;
+    /* centers the text */
+    padding: 10px;
+    /* adds padding */
+}
